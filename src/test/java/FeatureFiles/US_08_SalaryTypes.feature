@@ -5,7 +5,7 @@ Feature: Login Functionality
     When Enter username and password and  click Login button for Salary Page
     Given Navigate to Salary Types page
 
-  @RegressionTest
+
   Scenario: US_8 TC_01 (Go to Salary Types page)
     Then SalaryTypes page title control
 
