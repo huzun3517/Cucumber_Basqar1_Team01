@@ -5,7 +5,6 @@ Feature: Test Country Deletion 3-4
     When Enter username "daulet2030@gmail.com" and password "TechnoStudy123@" login click
     Then Check for successful login
 
-  @RegressionTest
   Scenario:   Go to countries page
     And Select countries page
     Then Add new

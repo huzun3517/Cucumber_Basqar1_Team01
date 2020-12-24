@@ -3,7 +3,7 @@
     <test name="test1">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="Runners._06_TestRunnerCrossBrowser"></class>
+            <class name="Runners.SmokeTest_parallel"></class>
         </classes>
     </test>
 
@@ -11,7 +11,7 @@
     <test name="test2">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
-            <class name="Runners._06_TestRunnerCrossBrowser"></class>
+            <class name="Runners.SmokeTest_parallel"></class>
         </classes>
     </test>
 

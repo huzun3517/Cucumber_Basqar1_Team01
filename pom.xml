@@ -119,7 +119,7 @@
 
                     <includes>
                         <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                        <include>**/_03_TestRunnerSmoke.java</include>
+                        <include>**/SmokeTest.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -145,7 +145,7 @@
                             <includes>
                                 <!-- for  run class or classes-->
                                 <!-- **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor.Jenkins icin -->
-                                <include>**/_03_TestRunnerSmoke.java</include>
+                                <include>**/SmokeTest.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
                         </configuration>
@@ -168,7 +168,7 @@
                             <includes>
                                 <!-- for  run class or classes-->
                                 <!-- **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor.Jenkins icin -->
-                                <include>**/_04_TestRunnerRegressionWithPlugin.java</include>
+                                <include>**/RegressionTest.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
                         </configuration>
