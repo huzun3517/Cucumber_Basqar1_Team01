@@ -3,6 +3,7 @@ package Utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
@@ -23,9 +24,14 @@ public class Driver {
 
             switch (threadBrowserName.get()) {
 
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    threadDriver.set(new EdgeDriver());
+                    break;
+
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    threadDriver.set(new FirefoxDriver());
+                    threadDriver.set( new FirefoxDriver() );
                     break;
 
                 case "opera":
@@ -33,20 +39,21 @@ public class Driver {
                     threadDriver.set(new OperaDriver());
                     break;
 
-                case "edge":
-                    WebDriverManager.edgedriver().setup();
-                    threadDriver.set(new EdgeDriver());
-                    break;
-
                 default:
                     WebDriverManager.chromedriver().setup();
-                    threadDriver.set(new ChromeDriver());
+                    threadDriver.set( new ChromeDriver() );
                     break;
 
-            /*  todo Jetkins de calıştırmak icin yorumu açmalısın. Not yorumu açınca İntellijde run
-                     edildiğinde browser olmadan yapıyor testleri.
 
-                     default:
+
+
+
+        /*     todo   Jetkins de calıştırmak icin yukarıdaki default kısmını yoruma alıp, aşagidaki default bölümünün yorumunu açmalısın.
+                      Sonrasında bunu Github a da push etmelisin çünkü Jenkins Github adresinden alıp çalışıyor.
+                      Not: Aşağıdaki yorumu açınca İntellij de run edildiğinde testleri browserı çalıştırmadan yapıyor.*/
+
+        /*
+                default:
                     WebDriverManager.chromedriver().setup();
 
                     ChromeOptions options = new ChromeOptions();
@@ -54,7 +61,8 @@ public class Driver {
 
                     threadDriver.set( new ChromeDriver(options) );
                     break;
-            */
+
+         */
 
             }
 
