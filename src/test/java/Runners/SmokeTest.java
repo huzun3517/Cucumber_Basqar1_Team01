@@ -12,11 +12,9 @@ import org.testng.annotations.AfterClass;
         features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"},
         dryRun = false,
-        plugin = {
-
-                "com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport/ExtentReportRegression.html"
-                // to generate a extend report we need this plugin
-                //olusturulacak raporun yari ve adi veriliyor
+        plugin = { //basit rapor oluşturan plugin  // bu bölüm sonradan jenkins report için eklendi
+                "html:target/cucumber-report",
+                "json:target/cucumber.json"
         }
 )
 

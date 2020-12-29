@@ -42,6 +42,20 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     threadDriver.set(new ChromeDriver());
                     break;
+
+            /*  todo Jetkins de calıştırmak icin yorumu açmalısın. Not yorumu açınca İntellijde run
+                     edildiğinde browser olmadan yapıyor testleri.
+
+                     default:
+                    WebDriverManager.chromedriver().setup();
+
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400"); //width, height
+
+                    threadDriver.set( new ChromeDriver(options) );
+                    break;
+            */
+
             }
 
         }

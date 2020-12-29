@@ -11,7 +11,7 @@ Feature: Bank Accounts Functionality
     Then page validation
       | bankAccountstitle | Bank Accounts |
 
-
+  @RegressionTest
   Scenario: US_11 TC_02
     When click on button with button name
       | firstSetup   |
